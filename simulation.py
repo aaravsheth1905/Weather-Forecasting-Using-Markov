@@ -1,5 +1,5 @@
 """
-simulation.py — WeatherSense AI
+simulation.py — Weather Forecasting Using Markov
 =================================
 Monte Carlo simulation engine built on top of the Markov Chain transition matrix.
 
@@ -12,7 +12,7 @@ Key difference from analytical Markov prediction:
 - Monte Carlo: empirical distribution that captures simulation variance
   and makes complex multi-path statistics easy to compute
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import numpy as np

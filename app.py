@@ -1,5 +1,5 @@
 """
-app.py — WeatherSense AI
+app.py — Weather Forecasting Using Markov
 ==========================
 Main Streamlit application entry point.
 
@@ -14,7 +14,7 @@ Architecture:
 Run locally:
     streamlit run app.py
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import streamlit as st
@@ -51,8 +51,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        "Get help": "https://github.com/yourusername/WeatherSenseAI",
-        "Report a bug": "https://github.com/yourusername/WeatherSenseAI/issues",
+        "Get help": "https://github.com/yourusername/Weather Forecasting Using MarkovAI",
+        "Report a bug": "https://github.com/yourusername/Weather Forecasting Using MarkovAI/issues",
         "About": f"**{PROJECT_NAME}** — {PROJECT_SUBTITLE}",
     },
 )
@@ -157,7 +157,7 @@ def page_overview():
     with col1:
         with st.expander("📐 How It Works — Architecture", expanded=True):
             st.markdown("""
-            **WeatherSense AI** uses a two-stage probabilistic forecasting pipeline:
+            **Weather Forecasting Using Markov** uses a two-stage probabilistic forecasting pipeline:
 
             **Stage 1 — Markov Chain Model**
             - Historical hourly data is classified into weather states: ☀️ Sunny, ⛅ Cloudy, 🌧️ Rainy
@@ -684,7 +684,7 @@ def page_assistant(tm_df: pd.DataFrame, steady_state: dict, summary: dict):
             else:
                 st.markdown(f"""
                 <div class="ai-chat-bubble-assistant">
-                    <div class="ai-assistant-header">🤖 WeatherSense AI</div>
+                    <div class="ai-assistant-header">🤖 Weather Forecasting Using Markov</div>
                     {content}
                 </div>
                 """, unsafe_allow_html=True)
@@ -742,7 +742,7 @@ def page_download(df: pd.DataFrame, tm_df: pd.DataFrame, summary: dict):
         st.download_button(
             "⬇️ Download Processed Dataset (CSV)",
             data=csv_bytes,
-            file_name="weathersense_processed_data.csv",
+            file_name="weather_forecasting_markov_processed_data.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -752,7 +752,7 @@ def page_download(df: pd.DataFrame, tm_df: pd.DataFrame, summary: dict):
         st.download_button(
             "⬇️ Download Transition Matrix (CSV)",
             data=tm_csv,
-            file_name="weathersense_transition_matrix.csv",
+            file_name="weather_forecasting_markov_transition_matrix.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -764,7 +764,7 @@ def page_download(df: pd.DataFrame, tm_df: pd.DataFrame, summary: dict):
             st.download_button(
                 "⬇️ Download Forecast (CSV)",
                 data=forecast_bytes,
-                file_name="weathersense_forecast.csv",
+                file_name="weather_forecasting_markov_forecast.csv",
                 mime="text/csv",
                 use_container_width=True,
             )
@@ -774,7 +774,7 @@ def page_download(df: pd.DataFrame, tm_df: pd.DataFrame, summary: dict):
             st.download_button(
                 "⬇️ Download Forecast Report (TXT)",
                 data=report_bytes,
-                file_name="weathersense_report.txt",
+                file_name="weather_forecasting_markov_report.txt",
                 mime="text/plain",
                 use_container_width=True,
             )

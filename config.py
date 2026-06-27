@@ -6,6 +6,8 @@ Central configuration module. Single source of truth for all constants.
 Author: WeatherSense AI
 """
 
+import os
+
 # ─── Project Metadata ────────────────────────────────────────────────────────
 
 PROJECT_NAME = "WeatherSense AI"
@@ -14,7 +16,20 @@ PROJECT_VERSION = "1.0.0"
 
 # ─── Data Configuration ───────────────────────────────────────────────────────
 
-DATA_PATH = "data/weather.csv"
+# Look for weather.csv in data/ folder first, then root directory
+def _find_data_path():
+    candidates = [
+        "data/weather.csv",
+        "weather.csv",
+        os.path.join(os.path.dirname(__file__), "data", "weather.csv"),
+        os.path.join(os.path.dirname(__file__), "weather.csv"),
+    ]
+    for path in candidates:
+        if os.path.exists(path):
+            return path
+    return "data/weather.csv"  # default, will show clear error
+
+DATA_PATH = _find_data_path()
 
 COLUMNS = {
     "day": "Day",

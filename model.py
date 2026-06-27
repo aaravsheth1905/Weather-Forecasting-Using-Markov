@@ -1,5 +1,5 @@
 """
-model.py — WeatherSense AI
+model.py — Weather Forecasting Using Markov
 ============================
 Markov Chain model: transition counting, matrix normalization,
 steady-state analysis, and matrix validation.
@@ -8,7 +8,7 @@ A first-order Markov Chain makes the Markov assumption: the probability of
 the next state depends only on the current state, not on any prior history.
 This is a reasonable approximation for short-range weather forecasting.
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import numpy as np

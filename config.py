@@ -1,9 +1,9 @@
 """
-config.py — WeatherSense AI
+config.py — Weather Forecasting Using Markov
 ============================
 Central configuration module. Single source of truth for all constants.
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import os
@@ -97,5 +97,5 @@ CHART_HEIGHT_HEATMAP = 450
 # ─── Export ───────────────────────────────────────────────────────────────────
 
 EXPORT_DATE_FORMAT = "%Y-%m-%d_%H-%M-%S"
-PREDICTION_CSV_NAME = "weathersense_forecast.csv"
-REPORT_NAME = "weathersense_report.txt"
+PREDICTION_CSV_NAME = "weather_forecasting_markov_forecast.csv"
+REPORT_NAME = "weather_forecasting_markov_report.txt"

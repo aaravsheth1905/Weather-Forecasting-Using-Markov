@@ -1,12 +1,12 @@
 """
-preprocessing.py — WeatherSense AI
+preprocessing.py — Weather Forecasting Using Markov
 =====================================
 Data loading, validation, cleaning, and weather-state feature engineering.
 
 Design principle: Pure functions wherever possible. Each function has a single
 responsibility and can be tested independently. No side effects on the input df.
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import pandas as pd

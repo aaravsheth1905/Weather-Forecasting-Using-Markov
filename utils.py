@@ -1,10 +1,10 @@
 """
-utils.py — WeatherSense AI
+utils.py — Weather Forecasting Using Markov
 ============================
 Utility functions: data export, report generation, formatting helpers,
 and a rule-based AI Weather Assistant (no API key required).
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import io
@@ -125,7 +125,7 @@ def generate_forecast_report(result, summary: Dict[str, Any]) -> str:
         f"  Humidity range:     {summary.get('humidity_min', 'N/A')} – {summary.get('humidity_max', 'N/A')} %",
         "",
         "=" * 60,
-        "  Powered by WeatherSense AI",
+        "  Powered by Weather Forecasting Using Markov",
         "  Markov Chains + Monte Carlo Simulation",
         "=" * 60,
     ]
@@ -363,7 +363,7 @@ def ask_weather_assistant(
     # ── Help / default ──
     if any(k in q for k in ["help", "what can you", "what questions", "hi", "hello"]):
         return (
-            "Hi! I'm the **WeatherSense AI Assistant**. I can explain:\n\n"
+            "Hi! I'm the **Weather Forecasting Using Markov Assistant**. I can explain:\n\n"
             "- 🔄 How the Markov Chain works\n"
             "- 🎲 What Monte Carlo Simulation does\n"
             "- 🔮 Why a specific state was predicted\n"

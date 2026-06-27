@@ -425,7 +425,14 @@ def forecast_timeline(result) -> go.Figure:
         yaxis_title="Probability (%)",
         yaxis=dict(range=[0, 101]),
         xaxis=dict(tickmode="linear", dtick=1),
-        legend=dict(orientation="h", y=1.12),
+        legend=dict(
+            orientation="h",
+            y=-0.2,
+            x=0.5,
+            xanchor="center",
+            yanchor="top",
+        ),
+        margin=dict(l=40, r=30, t=60, b=80),
         height=CHART_HEIGHT_TALL,
     )
     return fig

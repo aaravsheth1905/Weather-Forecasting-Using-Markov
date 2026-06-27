@@ -10,8 +10,8 @@ import os
 
 # ─── Project Metadata ────────────────────────────────────────────────────────
 
-PROJECT_NAME = "WeatherSense AI"
-PROJECT_SUBTITLE = "Intelligent Weather Forecasting using Markov Chains & Monte Carlo Simulation"
+PROJECT_NAME = "Weather Forecasting Using Markov"
+PROJECT_SUBTITLE = "Probabilistic Weather Forecasting using Markov Chains & Monte Carlo Simulation"
 PROJECT_VERSION = "1.0.0"
 
 # ─── Data Configuration ───────────────────────────────────────────────────────

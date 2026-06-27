@@ -1,5 +1,5 @@
 """
-visualizations.py — WeatherSense AI
+visualizations.py — Weather Forecasting Using Markov
 ======================================
 All Plotly visualization functions for the dashboard.
 
@@ -12,7 +12,7 @@ This separation means charts can be:
 Design principle: consistent color palette, consistent template,
 consistent font sizing. Every chart follows the same aesthetic.
 
-Author: WeatherSense AI
+Author: Weather Forecasting Using Markov
 """
 
 import pandas as pd
@@ -381,6 +381,13 @@ def forecast_timeline(result) -> go.Figure:
 
     fig = go.Figure()
 
+    # Convert hex colors to rgba for fillcolor (required by newer Plotly versions)
+    state_rgba = {
+        "Sunny":  "rgba(255, 215,   0, 0.7)",
+        "Cloudy": "rgba(135, 206, 235, 0.7)",
+        "Rainy":  "rgba( 30, 144, 255, 0.7)",
+    }
+
     for state in WEATHER_STATES:
         probs = [d.get(state, 0) * 100 for d in result.day_probabilities]
         fig.add_trace(go.Scatter(
@@ -390,7 +397,7 @@ def forecast_timeline(result) -> go.Figure:
             stackgroup="one",
             mode="lines",
             line=dict(width=0.5, color=STATE_COLORS.get(state)),
-            fillcolor=STATE_COLORS.get(state) + "BB",
+            fillcolor=state_rgba.get(state, "rgba(30,144,255,0.7)"),
             hovertemplate=f"<b>{state}</b><br>Day %{{x}}: %{{y:.1f}}%<extra></extra>",
         ))
 

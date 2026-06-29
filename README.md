@@ -134,11 +134,9 @@ streamlit run app.py
 ## ☁️ Deployment
 
 Deployed on **Streamlit Community Cloud**.
+Below is the link:
 
-1. Push repository to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Select the repository and set `app.py` as the main file
-4. Click Deploy
+https://weather-forecasting-using-markov.streamlit.app
 
 ---
 
